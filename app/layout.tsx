@@ -21,7 +21,7 @@ const fairyDust = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Kshitij - Mithibai College",
+  title: "Mithibai Kshitij",
   description: "Something Spectacular is on the Horizon",
 };
 

@@ -5,7 +5,7 @@ import gsap from 'gsap';
 import SubscribeForm from './components/SubscribeForm';
 import { Sparkles } from 'lucide-react';
 import Image from 'next/image';
-import Background from './components/Background';
+import StreetBackground from './components/StreetBackground';
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -51,27 +51,30 @@ export default function Home() {
   return (
     <main
       ref={containerRef}
-      className="flex min-h-screen flex-col items-center justify-center p-6 relative overflow-hidden bg-black selection:bg-purple-500/30"
+      className="flex min-h-screen flex-col items-center justify-center p-6 relative overflow-hidden bg-neutral-950 selection:bg-amber-500/30"
     >
       {/* Background Elements */}
-      <Background />
+      <StreetBackground />
 
-      <div className="z-10 flex flex-col items-center text-center space-y-8 max-w-4xl">
+      <div className="z-10 flex flex-col items-center text-center space-y-8 max-w-4xl w-full">
         {/* Main Title */}
-        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 pr-4">
-          <div ref={logoRef} className="relative w-24 h-24 md:w-44 md:h-44">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 w-full">
+          <div ref={logoRef} className="relative w-24 h-24 md:w-40 md:h-40 shrink-0">
             <Image
               src="/kshitij.webp"
               alt="Logo"
               fill
-              className="object-contain"
+              className="object-contain drop-shadow-[0_0_25px_rgba(245,158,11,0.6)]"
               priority
             />
           </div>
           <h1
             ref={titleRef}
-            className="text-6xl md:text-9xl tracking-wide bg-gradient-to-b from-white to-white/75 bg-clip-text text-transparent py-4 leading-[1.2] pr-7 pl-9"
-            style={{ fontFamily: 'var(--font-fairy-dust)' }}
+            className="text-6xl md:text-8xl lg:text-9xl tracking-wide text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/80 py-4 leading-[1.2] drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]"
+            style={{
+              fontFamily: 'var(--font-fairy-dust)',
+              textShadow: '0 0 20px rgba(219, 39, 119, 0.5), 0 0 40px rgba(245, 158, 11, 0.3)'
+            }}
           >
             kshitij'25
           </h1>
@@ -80,13 +83,18 @@ export default function Home() {
         {/* Status */}
         <p
           ref={subtitleRef}
-          className="text-xl md:text-2xl font-light text-cyan-200/80 tracking-widest uppercase drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]"
+          className="text-xl md:text-2xl font-light text-amber-300/80 tracking-widest uppercase drop-shadow-[0_0_5px_rgba(245,158,11,0.5)]"
         >
           To be live soon
         </p>
 
-        {/* Divider */}
-        <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent my-8" />
+        {/* Divider - Kaali Peeli Style */}
+        <div
+          className="w-48 h-2 my-8 skew-x-[-20deg]"
+          style={{
+            backgroundImage: 'repeating-linear-gradient(45deg, #fbbf24, #fbbf24 10px, #000 10px, #000 20px)'
+          }}
+        />
 
         {/* Tagline */}
         <p

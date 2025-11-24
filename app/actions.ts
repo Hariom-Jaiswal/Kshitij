@@ -33,12 +33,12 @@ export async function subscribeUser(prevState: any, formData: FormData) {
         const isDuplicate = rows.some((row) => row.get('Email') === email);
 
         if (isDuplicate) {
-            return { message: 'You are already subscribed!', success: true };
+            return { message: '😎 We\’ve Added You to the List', success: true };
         }
 
         await sheet.addRow({ Email: email, Date: new Date().toISOString() });
 
-        return { message: 'Thank you for subscribing!', success: true };
+        return { message: '💖 See You at Kshitij\'25!', success: true };
     } catch (error) {
         console.error('Subscription error:', error);
         return { message: 'Something went wrong. Please try again.', success: false };

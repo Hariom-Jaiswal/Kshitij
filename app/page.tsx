@@ -80,26 +80,30 @@ export default function Home() {
         {/* Status */}
         <p
           ref={subtitleRef}
-          className="text-xl md:text-2xl font-light text-purple-200/80 tracking-widest uppercase"
+          className="text-xl md:text-2xl font-light text-cyan-200/80 tracking-widest uppercase drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]"
         >
-          Under Construction
+          To be live soon
         </p>
 
         {/* Divider */}
-        <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent my-8" />
+        <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent my-8" />
 
         {/* Tagline */}
         <p
           ref={taglineRef}
-          className="text-lg md:text-3xl text-gray-400 font-light leading-relaxed max-w-2xl"
+          className="text-lg md:text-3xl text-gray-300 font-light leading-relaxed max-w-2xl"
         >
-          "Something <span className="text-white font-medium">Spectacular</span> is on the Horizon"
+          "Something <span className="text-fuchsia-400 font-medium drop-shadow-[0_0_8px_rgba(232,121,249,0.5)]">Spectacular</span> is on the Horizon"
         </p>
 
         {/* Subscribe Form */}
         <SubscribeForm />
       </div>
 
+      {/* Footer / Copyright */}
+      <div className="absolute bottom-8 text-xs text-gray-500 tracking-widest uppercase text-center">
+        Official website of Kshitij'25<br />Mithibai college
+      </div>
     </main>
   );
 }

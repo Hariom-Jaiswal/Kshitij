@@ -3,7 +3,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import SubscribeForm from './components/SubscribeForm';
-import { Sparkles } from 'lucide-react';
 import Image from 'next/image';
 import StreetBackground from './components/StreetBackground';
 

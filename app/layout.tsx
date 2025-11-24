@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 const fairyDust = localFont({
-  src: './fonts/FairyDustB.ttf',
+  src: './assets/fonts/FairyDustB.ttf',
   variable: '--font-fairy-dust',
   display: 'swap',
 });
